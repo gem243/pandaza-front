@@ -55,6 +55,7 @@ export default {
           requestBody
         );
         localStorage.setItem("pandaza-token", response.data.token);
+        localStorage.setItem("pandaza-username", response.data.id);
         this.isUserLoggedIn = true;
         this.message = `Bienvenido ${response.data.name} a tu recetario`;
       } catch (error) {
